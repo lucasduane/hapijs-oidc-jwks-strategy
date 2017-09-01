@@ -1,0 +1,37 @@
+{
+  "name": "hapijs-oidc-jwks-strategy",
+  "version": "1.0.0",
+  "description": "OpenID Connector for IdentityServer4 and HapiJS ",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasduane/hapijs-oidc-jwks-strategy.git"
+  },
+  "keywords": [
+    "OIDC",
+    "IDS4",
+    "HapiJS",
+    "Strategy"
+  ],
+  "author": "Lucas Duane Gomes Pimenta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasduane/hapijs-oidc-jwks-strategy/issues"
+  },
+  "homepage": "https://github.com/lucasduane/hapijs-oidc-jwks-strategy#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "boom": "^5.2.0",
+    "jsonwebtoken": "^7.4.3",
+    "node-rsa": "^0.4.2",
+    "request": "^2.81.0",
+    "url-join": "^2.0.2",
+    "x509": "^0.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
+}
