@@ -1,6 +1,6 @@
 {
   "name": "hapijs-oidc-jwks-strategy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OpenID Connector for IdentityServer4 and HapiJS ",
   "main": "index.js",
   "scripts": {
