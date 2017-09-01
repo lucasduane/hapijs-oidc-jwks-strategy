@@ -18,3 +18,15 @@ const oidcJwks = require('hapijs-oidc-jwks-strategy');
 server.register(oidcJwks, { issuer : "<issuer base URL>"});
 
 ```
+On your routes:
+
+```
+module.exports = {
+    path : '...',
+    ...
+    config : {
+        auth : 'oidc-jwks-strategy',,
+    }
+};
+
+```
