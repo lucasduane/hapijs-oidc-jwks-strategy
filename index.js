@@ -10,7 +10,7 @@ const plugin = {
 
     server.auth.scheme(SCHEMA_NAME, oidcJwksSchema);
 
-    server.auth.strategy(STRATEGY_NAME, SCHEMA_NAME, true, options);
+    server.auth.strategy(STRATEGY_NAME, SCHEMA_NAME, 'required', options);
 
     next();
   }

@@ -28,8 +28,8 @@ module.exports = (server, options) => {
 
   let publicKey = null;
 
-  const authenticate = (request, reply) => {
-    if (request.method.toLowerCase() === 'options' && !request.headers['Authorization']) {
+  const authenticate = (req, reply) => {
+    if (req.method.toLowerCase() === 'options' && !req.headers['Authorization']) {
       return reply.continue();
     }
 
@@ -69,13 +69,21 @@ module.exports = (server, options) => {
           return reply(Boom.internal());
         }
 
-        jwtVerify(request, publicKey, (verificationError, credentials) => {
+        jwtVerify(req, publicKey, (verificationError, credentials) => {
           if (verificationError) {
             return reply(Boom.unauthorized());
           }
 
           return reply.continue({ credentials });
         });
+      });
+    } else {
+      jwtVerify(req, publicKey, (verificationError, credentials) => {
+        if (verificationError) {
+          return reply(Boom.unauthorized());
+        }
+
+        return reply.continue({ credentials });
       });
     }
 
