@@ -29,9 +29,9 @@ module.exports = (server, options) => {
   let publicKey = null;
 
   const authenticate = (req, reply) => {
-    if (req.method.toLowerCase() === 'options' && !req.headers['Authorization']) {
+    if (req.method.toLowerCase() === 'options' && !req.headers['authorization']) {
       return reply.continue();
-    } else if (!req.headers['Authorization']) {
+    } else if (!req.headers['authorization']) {
       return reply(Boom.unauthorized());
     }
 
